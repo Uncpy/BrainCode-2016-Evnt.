@@ -32,6 +32,12 @@ body {
 	src: url(/assets/fonts/monof55.ttf) format("truetype");;
 }
 
+main {
+	border: 1px solid green;
+	margin: 0% 15%;
+	
+}
+
 /* main-page */
 
 .wrapper {
@@ -83,4 +89,9 @@ body {
 	display: block;
 	padding: 5%;
 	text-decoration: none;
+}
+
+/* footer */
+
+footer {
 }
