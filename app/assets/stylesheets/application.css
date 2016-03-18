@@ -13,3 +13,62 @@
  *= require_tree .
  *= require_self
  */
+
+@import bootstrap; 
+
+/* common */
+
+body {
+	background: url('bgs/music-691012.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: "Monof";
+	src: url(/assets/fonts/monof55.ttf) format("truetype");;
+}
+
+/* main-page */
+
+.wrapper {
+	align-items: center;
+	color: white;
+	display: flex;
+	/*font-family: "Monof";*/
+	height: 100vh;
+	justify-content: center;
+	margin: 0% 15%;
+}
+
+.evnt-logo {
+	background-color: #8a2869;
+	border-radius: 50%;
+	box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.5);
+	font-size: 15vh;
+	height: 50vh;
+	line-height: 50vh;
+	width: 50vh;
+	text-align: center;
+}
+
+.evnt-nav {
+	width: 50%;
+}
+
+.evnt-nav ul {
+	list-style-type: none;
+}
+
+.evnt-nav ul li {
+	background: #8a2869;
+	border-radius: 10px;
+	box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.5);
+	font-size: 1.5em;
+	margin-bottom: 5%;
+	padding: 5%;
+	text-align: center;
+}
