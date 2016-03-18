@@ -118,7 +118,6 @@ header ul {
 }
 
 header li {
-	border: 1px dotted blue;
 	display: inline-block;
 	list-style-type: none;
 	padding: 2% 1% 0.5% 1%;
