@@ -56,19 +56,31 @@ body {
 }
 
 .evnt-nav {
+	margin-left: 5%;
 	width: 50%;
 }
 
 .evnt-nav ul {
 	list-style-type: none;
+	padding: 0;
 }
 
 .evnt-nav ul li {
-	background: #8a2869;
+	background: rgba(138, 40, 105, 1);
 	border-radius: 10px;
 	box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.5);
 	font-size: 1.5em;
 	margin-bottom: 5%;
-	padding: 5%;
 	text-align: center;
+}
+
+.evnt-nav ul li:hover {
+	background: rgba(186, 44, 138, 1);
+}
+
+.evnt-nav ul li a {
+	color: inherit;
+	display: block;
+	padding: 5%;
+	text-decoration: none;
 }
