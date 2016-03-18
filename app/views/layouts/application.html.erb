@@ -13,10 +13,16 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+
+    <!-- Awesome fonts! -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
- 
-    <!--  <%= render "layouts/header" %> -->
+
+    <% if current_page?(controller: 'home', action: 'index') %>
+    <% else %>
+      <%= render "layouts/header" %>
+    <% end%>
     
     <main>
       <%= yield %>

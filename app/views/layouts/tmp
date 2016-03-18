@@ -1,0 +1,15 @@
+        <% if current_user %>
+          <li>
+            <!-- <span class="user-img">
+              <%= image_tag(@auth['info']['image'], width: '50', heigth: '50', class: 'img-circle') %>
+            </span> -->
+            <span class="user-name">
+              <a href="/"><%= current_user.name  %></a>
+            </span>
+          </li>
+          <li>
+            <%= link_to "Wyloguj się", 'sign_out', method: :delete %>
+          </li>
+        <% else %>
+          <li><%= link_to "auth/facebook" do %><i class="fa fa-facebook"></i><% end %></li>
+        <% end %>

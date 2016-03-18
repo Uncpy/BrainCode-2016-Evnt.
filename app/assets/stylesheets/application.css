@@ -98,6 +98,37 @@ main {
 	text-decoration: none;
 }
 
+/* header */
+
+header {
+	color: white;
+}
+
+header nav {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	margin: 0% 10% 5% 10%;
+}
+
+header ul {
+	margin: 0;
+	width: 100%;
+}
+
+header li {
+	border: 1px dotted blue;
+	display: inline-block;
+	list-style-type: none;
+	padding: 2% 1% 0.5% 1%;
+}
+
+header a {
+	color: inherit;
+	text-decoration: none;
+}
+
 /* footer */
 
 footer {
@@ -107,13 +138,16 @@ footer {
 	padding-top: 0.5%;
 }
 
+footer span {
+	margin: 0 1%;
+}
+
 footer ul {
 	margin: 0;
 	padding: 0;
 }
 
 footer ul li {
-	float: right;
 	display: inline;
 	margin: 0 1%;
 }
