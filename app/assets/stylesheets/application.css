@@ -14,7 +14,6 @@
  *= require_self
  */
 
-@import bootstrap; 
 
 /* common */
 
@@ -23,19 +22,27 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	background-attachment: fixed;
 	margin: 0;
 	padding: 0;
 }
 
 @font-face {
 	font-family: "Monof";
-	src: url(/assets/fonts/monof55.ttf) format("truetype");;
+	src: url('/assets/fonts/monof55.ttf') format("truetype");;
 }
 
 main {
-	border: 1px solid green;
+	/*border: 1px solid green;*/
 	margin: 0% 15%;
-	
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
 }
 
 /* main-page */
@@ -44,10 +51,10 @@ main {
 	align-items: center;
 	color: white;
 	display: flex;
-	/*font-family: "Monof";*/
+	font-family: "Monof";
 	height: 100vh;
 	justify-content: center;
-	margin: 0% 15%;
+	/*margin: 0% 15%;*/
 }
 
 .evnt-logo {
@@ -94,4 +101,20 @@ main {
 /* footer */
 
 footer {
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	color: white;
+	margin: 5% 10%;
+	padding-top: 0.5%;
 }
+
+footer ul {
+	margin: 0;
+	padding: 0;
+}
+
+footer ul li {
+	float: right;
+	display: inline;
+	margin: 0 1%;
+}
+
