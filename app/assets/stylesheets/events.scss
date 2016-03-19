@@ -115,10 +115,19 @@ form#new_event {
 		margin-bottom: 5%;
 	}
 
-	input[type=text], input[type=number], textarea {
+	input[type=text], input[type=number], textarea, input[type=datetime-local] {
 		border: none;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.7);
 		background: none;
+	}
+
+	input[type=datetime-local], label[for=event_date] {
+		color: rgba(167, 167, 167, 1);
+		font-weight: 300;
+	}
+
+	input#event_address {
+		margin-bottom: 1%;
 	}
 
 	.submit-btn {

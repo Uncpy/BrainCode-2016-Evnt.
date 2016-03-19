@@ -83,7 +83,7 @@ header ul {
 }
 
 header li:hover {
-	color: rgba(255, 255, 255, 0.8);
+	/*color: rgba(255, 255, 255, 0.8);*/
 	cursor: pointer;
 	text-decoration: underline;
 }
@@ -100,6 +100,10 @@ header a {
 	color: inherit;
 	display: block;
 	text-decoration: none;
+}
+
+header a:hover {
+	color: inherit;
 }
 
 header #evnt-logo {
