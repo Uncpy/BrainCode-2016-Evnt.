@@ -5,6 +5,12 @@ class EventsController < ApplicationController
   def index
     @events = Event.all.order("date DESC")
     get_current_user_location
+    
+    # if !@tag_list
+    #   @tag_list =
+    # else
+    #   get_tags_to_show
+    # end 
     get_tags_to_show
   end
 
@@ -44,7 +50,7 @@ class EventsController < ApplicationController
   end
 
   def get_tags_to_show
-    @tag_list = Event.tagged_with("%#{params[:query]}%", :any => true)
+    # @tag_list = Event.tagged_with("%#{params[:search][:query]}%", :any => true)
   end
 
   private

@@ -1,19 +1,33 @@
-<h1>My events </h1>
-<% if @joined_events.empty? %>
-  <p>Brak wydarzeń w których bierzesz udział</p>
-<% else %>
-  <% @joined_events.each do |event| %>
-    <%= link_to "#{event.name}", event_path(event) %>
-    <%= event.description %>
-    <%= event.date %>
-  <% end %>
-<% end %>
-<% if @created_events.empty? %>
-  <p>Brak twoich wydarzeń</p>
-<% else %>
-  <% @created_events.each do |event| %>
-    <%= link_to "#{event.name}", event_path(event) %>
-    <%= event.description %>
-    <%= event.date %>
-  <% end %>
-<% end %>
+<div class="row title">
+  <h1>Moje wydarzenia </h1>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3">
+    <% if @joined_events.empty? %>
+      <p>W najbliższym czasie nie bierzesz udziału w żadnych wydarzeniach. 
+      <%= link_to "Przejrzyj najnowsze!", events_path  %></p>
+    <% else %>
+      <ul>
+        <% @joined_events.each do |event| %>
+          <li>
+            <%= link_to "#{event.name}", event_path(event) %>
+            <%= event.date %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+    <% if @created_events.empty? %>
+      <p>W najbliższym czasie nie organizujesz żadnych wydarzeń.</p>
+    <% else %>
+      <ul>
+        <% @created_events.each do |event| %>
+          <li>
+            <%= link_to "#{event.name}", event_path(event) %>
+            <%= event.date %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>
