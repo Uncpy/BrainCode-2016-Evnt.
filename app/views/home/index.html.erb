@@ -5,12 +5,12 @@
 
 	<nav class="evnt-nav">
 		<ul>
-			<% if current_user %>
-				<li><a href="#">Wyloguj się</a></li>
+			<% if user_signed_in? %>
+				<li><%= link_to "Wyloguj się", 'sign_out', method: :delete %></li>
 				<li><a href="#">Moje wydarzenia</a></li>
-				<li><a href="#">Dodaj wydarzenie</a></li>
+				<li><%= link_to "Dodaj wydarzenie", new_event_path %></li>
 			<% else %>
-				<li><a href="#">Zaloguj się (poprzez facebook'a)</a></li>
+				<li><%= link_to "Zaloguj się (poprzez facebook'a)", "auth/facebook" %></li>
 			<% end %>
 
 			<li><%= link_to "Wydarzenia", events_path %></li>
