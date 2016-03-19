@@ -12,7 +12,7 @@
 </div>
 
 <div class="evnt-results row">
-	<% @events.each do |event| %>
+	<% @locations.each do |location| %>
 		<div class="evnt-result row">
 			<div class="evnt-img col-lg-1">
 				<%= link_to image_tag("keep_temporary.png", size: "100", class: 'evnt-photo')%>				
@@ -20,7 +20,7 @@
 			
 			<div class="evnt-descr col-lg-8">
 				<div class="evnt-name row">
-					<%=  link_to event.name, event %>
+					<%=  link_to location.name, location %>
 				</div>
 
 				<div class="hashtags row">
@@ -29,13 +29,16 @@
 					<% end %>
 				</div>
 			</div>
+			
 
 			<div class="evnt-info col-lg-3">
 				<label>Adres:</label>
-				<p>ul. Żymierskiego 5<br>66-200 Świebodzin</p>
+				<p><%= location.address %></p>
+				<!--<p>ul. Żymierskiego 5<br>66-200 Świebodzin</p>-->
 				
 				<label>Godzina rozpoczęcia: </label>
-				<p>03:14</p>
+				<p><%= location.date %></p>
+				<!--<p>03:14</p>-->
 			</div>
 		</div>
 	<% end %>
