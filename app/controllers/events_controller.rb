@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :find_events, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate!, except: [:index, :show]
 
   def index
     @events = Event.all.order("created_at DESC")
@@ -9,11 +10,11 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new
+    @event = current_user.events.build
   end
 
   def create
-    @event = Event.new(events_params)
+    @event = current_user.events.build(events_params)
 
     if @event.save
       redirect_to @event

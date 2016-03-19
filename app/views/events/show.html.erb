@@ -2,4 +2,8 @@
 <p><%= @event.description %></p>
 <p><%= @event.address %></p>
 <p><%= @event.created_at %></p>
+<p>Event owner <%= @event.user.name %></p>
 <%= link_to "Dołącz!", "#" %>
+
+<%= link_to "Edit", edit_event_path(@event) %>
+<%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"} %>
