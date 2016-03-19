@@ -3,5 +3,7 @@
   <%= f.input :description, label: 'Description', error: 'Please write description' %>
   <%= f.input :address, label: 'Address', error: "Please give us some address info" %>
   <%= f.input :max, label: 'Max people', error: "We need to know how many ppl" %>
+  <%= f.datetime_select :date, labe: 'Date' %>
+  <br>
   <%= f.button :submit %>
 <% end %>
