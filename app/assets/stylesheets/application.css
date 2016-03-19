@@ -128,6 +128,11 @@ header a {
 	text-decoration: none;
 }
 
+#evnt-logo {
+	background: url('logo/evnt_logo100x100.png');
+	background-size: cover;
+}
+
 /* footer */
 
 footer {
