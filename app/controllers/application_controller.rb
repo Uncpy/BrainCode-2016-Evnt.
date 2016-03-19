@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   def get_current_user_location
     location_info = request.location
-    current_user.update(ip_address: location_info.latitude)
+    current_user.update(latitude: location_info.latitude, longitude: location_info.longitude)
     current_user.save
   end
 

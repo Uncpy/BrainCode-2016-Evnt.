@@ -5,7 +5,6 @@ class EventsController < ApplicationController
   def index
     @events = Event.all.order("created_at DESC")
     get_current_user_location
-    #update_ip
   end
 
   def show
