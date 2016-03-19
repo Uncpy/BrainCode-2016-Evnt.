@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'omniauth-facebook', '~> 3.0'
 gem 'geocoder', '~> 1.3', '>= 1.3.1'
+gem 'acts-as-taggable-on', '~> 3.4' 
 
 group :development, :test do
   gem 'byebug'
