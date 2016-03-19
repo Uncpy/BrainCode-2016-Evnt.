@@ -12,8 +12,6 @@
 	  	error: 'Brak informacji o lokalizacji wydarzenia.', wrapper: false, 
 	  	input_html: { class: 'col-lg-offset-1 col-lg-4'} %>
 
-	  <%= f.input :tag_list, placeholder: 'Tagi (separowane przecinkami)', label: false,
-	  	error: 'Proszę podać minimum 1 tag', wrapper: false %>
 
 		<!-- <%= f.input :max, label: 'Maksymalna liczba uczestników:', error: 'Brak informacji o maksymalnej liczbie uczestników.', wrapper: false,
 	  	input_html: { class: 'col-lg-1'},
@@ -23,8 +21,13 @@
 	  	input_html: { class: 'col-lg-1'}, wrapper: true,
 	  	label_html: { class: 'col-lg-offset-1 col-lg-3' } %> -->
 
+	  <!-- <%= f.input :tag_list, placeholder: 'Tagi (separowane przecinkami)', label: false,
+	  	error: 'Nie podano żadnego tagu (min. 1).', wrapper: false,
+	  	input_html: { class: 'col-lg-offset-1 col-lg-4' } %> -->
+	  	
 	  <label for="event_date" class="col-lg-2">Data wydarzenia</label>
 	  <input type="datetime-local" class="col-lg-2" name="event[date]" id="event_date" />
+
 
 	  <br>
 	  <%= f.submit "Utwórz wydarzenie", :class => "form-btn col-lg-offset-5 col-lg-2" %>
