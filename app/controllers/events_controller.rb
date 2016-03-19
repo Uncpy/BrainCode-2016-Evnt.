@@ -44,14 +44,6 @@ class EventsController < ApplicationController
     redirect_to root_path
   end
 
-<<<<<<< HEAD
-  def get_tags_to_show
-    # @tag_list = Event.tagged_with("%#{params[:search][:query]}%", :any => true)
-  end
-=======
-
->>>>>>> dc80bba6ba566ada255462a77db5c43e808dd459
-
   private
 
     def events_params
