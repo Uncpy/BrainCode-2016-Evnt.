@@ -100,7 +100,7 @@
 
 /* add-event-form */
 
-form#new_event {
+form#new_event, form.edit_event {
 	/*border: 1px solid blue;*/
 	/*color: black;*/
 
@@ -129,17 +129,23 @@ form#new_event {
 	input#event_address {
 		margin-bottom: 1%;
 	}
+}
 
-	.submit-btn {
-		box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.7);
-		border: none;
-		background: none;
-		font-size: 1.5em;
-		margin-top: 5%;
+.form-btn {
+	box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.7);
+	border: none;
+	background: none;
+	color: white;
+	font-size: 1.5em;
+	margin: 5% 2% 0% 2%;
+	
+	&:hover {
+		background: rgba(255, 255, 255, 0.3);
+	}
 
-		&:hover {
-			background: rgba(255, 255, 255, 0.3);
-		}
+	&:hover {
+		text-decoration: none;
+		color: inherit;
 	}
 }
 
