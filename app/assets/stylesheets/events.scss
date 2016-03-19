@@ -40,7 +40,11 @@
 		cursor: pointer;
 		font-size: 1.3em;
 		margin: 1%;
-		padding: 2%;
+		padding: 0.5% 2%;
+	}
+
+	.hashtag:hover {
+		background-color: rgba(255, 255, 255, 0.1);
 	}
 
 /*		.hashtag:after {
@@ -94,3 +98,42 @@
 
 }
 
+/* add-event-form */
+
+form#new_event {
+	/*border: 1px solid blue;*/
+	/*color: black;*/
+
+	label {	
+		width: 20%;
+		padding-right: 2%;
+		text-align: right;
+	}
+
+	input#event_name {
+		font-size: 3em;
+		margin-bottom: 5%;
+	}
+
+	input[type=text], input[type=number], textarea {
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+		background: none;
+	}
+
+	.submit-btn {
+		box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.7);
+		border: none;
+		background: none;
+		font-size: 1.5em;
+		margin-top: 5%;
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.3);
+		}
+	}
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
