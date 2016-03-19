@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
      User.find(session[:user_id])
   end
 
+  def all_users
+    @users = User.all
+  end
+
   def get_current_user_location
       @location_info = request.location
       @locations = Event.near([@location_info.latitude, @location_info.longitude], 20)
