@@ -1,47 +1,44 @@
-<div class="title">
-	<h1>Najbliższe wydarzenia!</h1>
+<div class="title row">
+	<h1 class="col-lg-12">Najbliższe wydarzenia!</h1>
 </div>
 
-<div class="searchbox">
-	<div class="search">
+<div class="searchbox row">
+	<div class="search col-lg-6">
 		<input type="text" placeholder="Zawęź pole poszukiwań...">
 	</div>
-	<div class="hashtags">
-		<span class="hashtag">#sport</span>
-		<span class="hashtag">#piłka nożna</span>
-		<span class="hashtag">#boisko</span>
-		<span class="hashtag">#sport</span>
-		<span class="hashtag">#piłka nożna</span>
-		<span class="hashtag">#boisko</span>
-		<span class="hashtag">#sport</span>
-		<span class="hashtag">#piłka nożna</span>
-		<span class="hashtag">#boisko</span>
-		<span class="hashtag">#sport</span>
-		<span class="hashtag">#piłka nożna</span>
-		<span class="hashtag">#boisko</span>
-		<span class="hashtag">#sport</span>
-		<span class="hashtag">#piłka nożna</span>
-		<span class="hashtag">#boisko</span>
+	<div class="hashtags search-tags col-lg-6">
+		<span class="hashtag search-tag">#sport</span>
+		<span class="hashtag search-tag">#piłka nożna</span>
+		<span class="hashtag search-tag">#boisko</span>		
 	</div>	
 </div>
 
-<div class="evnt-results">
+<div class="evnt-results row">
 	<% @events.each do |event| %>
-		<div class="evnt-result">
-			<div class="evnt-img">
-				<%= link_to image_tag("keep_temporary.png", size: "100", class: "evnt-photo") %>				
+		<div class="evnt-result row">
+			<div class="evnt-img col-lg-1">
+				<%= link_to image_tag("keep_temporary.png", size: "100", class: 'evnt-photo')%>				
 			</div>
 			
-			<div class="evnt-name">
-				<h2><%=  link_to event.name, event %></h2>
+			<div class="evnt-descr col-lg-8">
+				<div class="evnt-name row">
+					<%=  link_to event.name, event %>
+				</div>
+
+				<div class="hashtags row">
+					<span class="hashtag evnt-tag">#sztywne</span>
+					<span class="hashtag evnt-tag">#kurwa</span>
+					<span class="hashtag evnt-tag">#hasztagi</span>
+				</div>
 			</div>
 
-			<div class="evnt-tags">
-				<p> <%= event.description %></p>
+			<div class="evnt-info col-lg-3">
+				<label>Adres:</label>
+				<p>ul. Żymierskiego 5<br>66-200 Świebodzin</p>
+				
+				<label>Godzina rozpoczęcia: </label>
+				<p>03:14</p>
 			</div>
-
-			<div class="evnt-address">ul. Żymierskiego 5<br>66-200 Świebodzin</div>
-			<div class="evnt-time">12:00 am</div>
 		</div>
 	<% end %>
 </div>
