@@ -9,6 +9,15 @@
     <%= link_to "Edit", edit_event_path(@event) %>
     <%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"} %>
   <% else %>
-    <%= link_to "Dołącz!", "#" %>
+  	<% if @event.attendees.include?(current_user) %>
+      <%= simple_form_for(current_user.invites.find_by(attended_event_id: @event.id), :html => { :method => :delete }) do |f| %>
+        <%= f.submit "Odejdź" %>
+      <% end %>
+    <% else %>
+      <%= simple_form_for(current_user.invites.build(attended_event_id: @event.id)) do |f| %>
+        <%= f.hidden_field :attended_event_id, :value => @event.id %>
+          <%= f.submit "Dołącz" %>
+      <% end %>
+    <% end %>
   <% end %>
 <% end %>

@@ -8,7 +8,7 @@
 			<% if user_signed_in? %>
 				<span class="user-part">
 					<li><%= link_to "Wyloguj się", 'sign_out', method: :delete %></li>
-					<li><a href="#">Moje wydarzenia</a></li>
+					<li><%= link_to "Moje wydarzenia", current_user %></li>
 					<li><%= link_to "Dodaj wydarzenie", new_event_path %></li>
 				</span>
 			<% else %>

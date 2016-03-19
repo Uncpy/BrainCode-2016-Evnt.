@@ -1,0 +1,19 @@
+<h1>My events </h1>
+<% if @joined_events.empty? %>
+  <p>Brak wydarzeń w których bierzesz udział</p>
+<% else %>
+  <% @joined_events.each do |event| %>
+    <%= link_to "#{event.name}", event_path(event) %>
+    <%= event.description %>
+    <%= event.date %>
+  <% end %>
+<% end %>
+<% if @created_events.empty? %>
+  <p>Brak twoich wydarzeń</p>
+<% else %>
+  <% @created_events.each do |event| %>
+    <%= link_to "#{event.name}", event_path(event) %>
+    <%= event.description %>
+    <%= event.date %>
+  <% end %>
+<% end %>
