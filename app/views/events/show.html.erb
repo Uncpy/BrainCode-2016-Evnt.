@@ -1,9 +1,13 @@
 <h2><%= @event.name %></h2>
 <p><%= @event.description %></p>
 <p><%= @event.address %></p>
-<p><%= @event.created_at %></p>
+<p><%= @event.date %></p>
 <p>Event owner <%= @event.user.name %></p>
-<%= link_to "Dołącz!", "#" %>
 
-<%= link_to "Edit", edit_event_path(@event) %>
-<%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"} %>
+<% if user_signed_in? %>
+  <%= link_to "Dołącz!", "#" %>
+  <% if current_user.id == @event.user_id %>
+    <%= link_to "Edit", edit_event_path(@event) %>
+    <%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"} %>
+  <% end %>
+<% end %>
