@@ -4,6 +4,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all.order("created_at DESC")
+    @ip = request.remote_ip
   end
 
   def show
