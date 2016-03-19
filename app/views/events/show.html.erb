@@ -5,9 +5,10 @@
 <p>Event owner <%= @event.user.name %></p>
 
 <% if user_signed_in? %>
-  <%= link_to "Dołącz!", "#" %>
   <% if current_user.id == @event.user_id %>
     <%= link_to "Edit", edit_event_path(@event) %>
     <%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"} %>
+  <% else %>
+    <%= link_to "Dołącz!", "#" %>
   <% end %>
 <% end %>
