@@ -142,66 +142,6 @@ header .facebook {
 	vertical-align: middle;
 }*/
 
-/* main-page */
-
-.wrapper {
-	align-items: center;
-	color: white;
-	display: flex;
-	height: 80vh;
-	font-family: "Monof";
-	justify-content: center;
-	/*margin: 0% 15%;*/
-}
-
-.evnt-logo {
-	background: rgba(154, 28, 66, 1);
-	border-radius: 50%;
-	box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.5);
-	font-size: 17vh;
-	height: 50vh;
-	line-height: 50vh;
-	width: 50vh;
-	text-align: center;
-}
-
-.evnt-nav {
-	margin-left: 5%;
-	width: 50%;
-}
-
-.evnt-nav ul {
-	list-style-type: none;
-	padding: 0;
-}
-
-.evnt-nav ul li {
-	background: rgba(154, 28, 66, 1);
-	border-radius: 10px;
-	box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.5);
-	font-size: 2em;
-	margin-bottom: 5%;
-	text-align: center;
-}
-
-.evnt-nav ul li:hover {
-	background: rgba(154, 28, 66, 0.7);
-	text-decoration: none;
-}
-
-.evnt-nav ul li a {
-	color: inherit;
-	display: block;
-	padding: 5%;
-	text-decoration: none;
-}
-
-.user-part {
-	margin-bottom: 25%;
-}
-
-
-
 /* footer */
 
 footer {
