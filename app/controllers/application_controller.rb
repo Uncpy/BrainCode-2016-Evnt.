@@ -12,7 +12,6 @@ class ApplicationController < ActionController::Base
      !!session[:user_id]
   end
 
-  def closest_events
 
   
   def current_user
