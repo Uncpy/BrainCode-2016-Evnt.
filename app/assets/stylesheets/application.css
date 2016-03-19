@@ -23,6 +23,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
+	color: white;
 	font-family: Tahoma, Geneva, sans-serif;
 	margin: 0;
 	padding: 0;
@@ -54,6 +55,82 @@ main {
   background:black;
   background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
 }
+
+/* header */
+
+header {
+	color: white;
+}
+
+header nav {
+	align-items: center;
+  background: rgba(0, 0, 0, 0); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Standard syntax */
+	/*border-bottom: 1px solid rgba(255, 255, 255, 0.5);*/
+	/*box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);*/
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	margin: 0% 10% 1% 10%;
+}
+
+header ul {
+	margin: 0;
+	/*font-size: 2em;*/
+	width: 100%;
+}
+
+header li:hover {
+	color: rgba(255, 255, 255, 0.8);
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+header li {
+	display: inline-flex;
+	height: 75px;
+	line-height: 75px;
+	list-style-type: none;
+	padding: 0% 1% 0.5% 1%;
+}
+
+header a {
+	color: inherit;
+	display: block;
+	text-decoration: none;
+}
+
+header #evnt-logo {
+	/*background-color: rgba(0, 0, 0, 0.3);*/
+	/*font-size: 10em;*/
+	/*color: rgba(154, 28, 66, 1);*/
+	border-radius: 3em;
+	/*font-weight: bold;*/
+}
+
+header .img-circle {
+	align-self: center;
+	border-radius: 50%;
+	height: 50px;
+	position: relative;
+		left: +20px;
+}
+
+header .facebook {
+	font-size: 2em;
+}
+
+/*#evnt-logo {
+	border: 1px dotted blue;
+	background: url('logo/evnt_logo100x100.png');
+	background-size: 75px;
+	background-repeat: no-repeat;
+	width: 75px;
+	vertical-align: middle;
+}*/
 
 /* main-page */
 
@@ -110,78 +187,7 @@ main {
 
 
 
-/* header */
 
-header {
-	color: white;
-}
-
-header nav {
-	align-items: center;
-  background: rgba(0, 0, 0, 0); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Standard syntax */
-	/*border-bottom: 1px solid rgba(255, 255, 255, 0.5);*/
-	/*box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);*/
-	display: flex;
-	flex-wrap: nowrap;
-	flex-direction: row;
-	margin: 0% 10% 5% 10%;
-}
-
-header ul {
-	margin: 0;
-	/*font-size: 2em;*/
-	width: 100%;
-}
-
-header li:hover {
-	color: rgba(255, 255, 255, 0.8);
-	cursor: pointer;
-	text-decoration: underline;
-}
-
-header li {
-	display: inline-flex;
-	height: 75px;
-	line-height: 75px;
-	list-style-type: none;
-	padding: 0% 1% 0.5% 1%;
-}
-
-header a {
-	color: inherit;
-	display: block;
-	text-decoration: none;
-}
-
-header #evnt-logo {
-	/*background-color: rgba(0, 0, 0, 0.3);*/
-	border-radius: 25px;
-	color: rgba(154, 28, 66, 1);
-	font-weight: bold;
-	font-size: 3em;
-}
-
-header .img-circle {
-	align-self: center;
-	border-radius: 50%;
-	height: 50px;
-	position: relative;
-		left: +20px;
-}
-
-header .facebook {
-	font-size: 2em;
-}
-
-/*#evnt-logo {
-	background: url('logo/evnt_logo100x100.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-}*/
 
 /* footer */
 

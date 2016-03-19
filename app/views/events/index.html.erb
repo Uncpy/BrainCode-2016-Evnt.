@@ -1,7 +1,47 @@
-<h1>Wydarzenia</h1>
+<div class="title">
+	<h1>Najbliższe wydarzenia!</h1>
+</div>
 
-<% @events.each do |event| %>
-	<h2><%=  link_to event.name, event %></h2>
-	<p> <%= event.description %></p>
-<%= @ip %>
-<% end %>
+<div class="searchbox">
+	<div class="search">
+		<input type="text" placeholder="Zawęź pole poszukiwań...">
+	</div>
+	<div class="hashtags">
+		<span class="hashtag">#sport</span>
+		<span class="hashtag">#piłka nożna</span>
+		<span class="hashtag">#boisko</span>
+		<span class="hashtag">#sport</span>
+		<span class="hashtag">#piłka nożna</span>
+		<span class="hashtag">#boisko</span>
+		<span class="hashtag">#sport</span>
+		<span class="hashtag">#piłka nożna</span>
+		<span class="hashtag">#boisko</span>
+		<span class="hashtag">#sport</span>
+		<span class="hashtag">#piłka nożna</span>
+		<span class="hashtag">#boisko</span>
+		<span class="hashtag">#sport</span>
+		<span class="hashtag">#piłka nożna</span>
+		<span class="hashtag">#boisko</span>
+	</div>	
+</div>
+
+<div class="evnt-results">
+	<% @events.each do |event| %>
+		<div class="evnt-result">
+			<div class="evnt-img">
+				<%= link_to image_tag("keep_temporary.png", size: "100", class: "evnt-photo") %>				
+			</div>
+			
+			<div class="evnt-name">
+				<h2><%=  link_to event.name, event %></h2>
+			</div>
+
+			<div class="evnt-tags">
+				<p> <%= event.description %></p>
+			</div>
+
+			<div class="evnt-address">ul. Żymierskiego 5<br>66-200 Świebodzin</div>
+			<div class="evnt-time">12:00 am</div>
+		</div>
+	<% end %>
+</div>
