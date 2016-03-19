@@ -3,8 +3,6 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :set_auth
-  before_action :current_user, only: :get_current_user_location
-  # before_action :authenticate!
 
   def authenticate!
      redirect_to root_path unless user_signed_in?
