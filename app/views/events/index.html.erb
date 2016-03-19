@@ -4,21 +4,7 @@
 
 <div class="searchbox row">
 
-	<div class="search col-lg-6">
-		<%= simple_form_for :search, url: events_path, :method => :get do |f| %>
-			<%= f.input :query, placeholder: "Zawęź pole poszukiwań...", label: false, wrapper: false %>
-			<%= f.submit "Search" %>
-		<% end %>
-	</div>
-
-	<!--
-	<div class="search col-lg-6">
-		<input type="text" placeholder="Zawęź pole poszukiwań...">
-	</div>-->
 	<div class="hashtags search-tags col-lg-6">
-		<%= @tag_list.each do |tag| %>
-			<span class="hashtag search-tag"><%= tag %></span>
-		<% end %>
 		<span class="hashtag search-tag">#sport</span>
 		<span class="hashtag search-tag">#piłka nożna</span>
 		<span class="hashtag search-tag">#boisko</span>		

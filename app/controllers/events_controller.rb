@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   def index
     @events = Event.all.order("date DESC")
     get_current_user_location
-    get_tags_to_show
+    @tagit = ""
   end
 
   def show
@@ -43,9 +43,7 @@ class EventsController < ApplicationController
     redirect_to root_path
   end
 
-  def get_tags_to_show
-    @tag_list = Event.tagged_with("%#{params[:query]}%", :any => true)
-  end
+
 
   private
 
