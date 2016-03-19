@@ -6,16 +6,43 @@
 	<nav class="evnt-nav">
 		<ul>
 			<% if user_signed_in? %>
-				<span class="user-part">
-					<li><%= link_to "Wyloguj się", 'sign_out', method: :delete %></li>
-					<li><%= link_to "Moje wydarzenia", current_user %></li>
-					<li><%= link_to "Dodaj wydarzenie", new_event_path %></li>
-				</span>
+				<div class="user-part">
+					<li>
+						<span class="left-part">
+							<i class="fa fa-list"></i>
+						</span>
+						<%= link_to "Moje wydarzenia", current_user %>
+					</li>
+					<li>
+						<span class="left-part">
+							<i class="fa fa-plus-square"></i>
+						</span>
+						<%= link_to "Dodaj wydarzenie", new_event_path %>
+					</li>
+					<li>
+						<span class="left-part">
+							<i class="fa fa-sign-out"></i>
+						</span>
+						<%= link_to "Wyloguj się", 'sign_out', method: :delete %>
+					</li>
+				</div>
 			<% else %>
-				<li><%= link_to "Zaloguj się (poprzez facebook'a)", "auth/facebook" %></li>
+				<div class="user-part">
+					<li>
+						<span class="left-part">
+							<i class="fa fa-sign-in"></i>
+						</span>
+						<%= link_to "Zaloguj się", "auth/facebook" %>
+					</li>
+				</div>
 			<% end %>
 
-			<li><%= link_to "Wydarzenia", events_path %></li>
+			<li>
+				<span class="left-part">
+					<i class="fa fa-calendar"></i>
+				</span>
+				<%= link_to "Wydarzenia", events_path %>
+			</li>
 		</ul>
 	</nav>
 </div>

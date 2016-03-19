@@ -146,3 +146,50 @@ form#new_event {
 textarea:focus, input:focus{
     outline: none;
 }
+
+/* single-event-page */
+
+.evnt-info {
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 20px;
+	padding: 2%;
+	text-align: center;
+	
+	ul {
+		list-style-type: none;
+		padding: 0;
+		max-height: 20vh;
+		overflow-y: auto;
+		width: 100%;
+		text-align: left;
+	}
+
+	h3 {
+		text-decoration: underline;
+		margin-top: 0;
+	}
+
+	.evnt-descr {
+		text-align: justify;
+	}
+
+	.evnt-controlls {
+		font-size: 1.5em;
+		list-style-type: none;
+		padding: 2% 5%;
+	
+		a {
+			color: rgba(154, 28, 66, 1);
+
+			&:hover {
+				font-weight: bold;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.title + .hashtags {
+	position: relative;
+		top: -50px;
+}

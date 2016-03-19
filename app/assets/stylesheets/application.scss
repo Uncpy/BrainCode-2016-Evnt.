@@ -85,7 +85,7 @@ header ul {
 header li:hover {
 	/*color: rgba(255, 255, 255, 0.8);*/
 	cursor: pointer;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 header li {
@@ -99,10 +99,10 @@ header li {
 header a {
 	color: inherit;
 	display: block;
-	text-decoration: none;
 }
 
 header a:hover {
+	/*text-decoration: none;*/
 	color: inherit;
 }
 
@@ -115,6 +115,10 @@ header #evnt-logo {
 	font-weight: bold;
 	position: relative;
 		left: +40%;
+
+	a:hover {
+		text-decoration: none;
+	}	
 }
 
 header .img-circle {
@@ -138,72 +142,17 @@ header .facebook {
 	vertical-align: middle;
 }*/
 
-/* main-page */
-
-.wrapper {
-	align-items: center;
-	color: white;
-	display: flex;
-	height: 80vh;
-	font-family: "Monof";
-	justify-content: center;
-	/*margin: 0% 15%;*/
-}
-
-.evnt-logo {
-	background: rgba(154, 28, 66, 1);
-	border-radius: 50%;
-	box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.5);
-	font-size: 17vh;
-	height: 50vh;
-	line-height: 50vh;
-	width: 50vh;
-	text-align: center;
-}
-
-.evnt-nav {
-	margin-left: 5%;
-	width: 50%;
-}
-
-.evnt-nav ul {
-	list-style-type: none;
-	padding: 0;
-}
-
-.evnt-nav ul li {
-	background: rgba(154, 28, 66, 1);
-	border-radius: 10px;
-	box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.5);
-	font-size: 2em;
-	margin-bottom: 5%;
-	text-align: center;
-}
-
-.evnt-nav ul li:hover {
-	background: rgba(186, 44, 138, 1);
-}
-
-.evnt-nav ul li a {
-	color: inherit;
-	display: block;
-	padding: 5%;
-	text-decoration: none;
-}
-
-.user-part {
-	margin-bottom: 25%;
-}
-
-
-
 /* footer */
 
 footer {
 	/*border-top: 1px solid rgba(255, 255, 255, 0.5);*/
 	color: white;
 	margin: 5% 10%;
-	padding-top: 0.5%;
+	padding-top: 0;
+}
+
+footer .sexy_line {
+	margin-bottom: 1%;
 }
 
 footer div {
