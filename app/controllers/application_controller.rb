@@ -11,6 +11,9 @@ class ApplicationController < ActionController::Base
   def user_signed_in?
      !!session[:user_id]
   end
+
+  def closest_events
+
   
   def current_user
      User.find(session[:user_id])
@@ -20,6 +23,7 @@ class ApplicationController < ActionController::Base
     location_info = request.location
     current_user.update(latitude: location_info.latitude, longitude: location_info.longitude)
     current_user.save
+    @locations = Event.near([location_info.latitude, location_info.longitude], 20)
   end
 
   def update_ip

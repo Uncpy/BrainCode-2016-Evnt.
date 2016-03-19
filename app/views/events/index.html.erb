@@ -4,4 +4,7 @@
 	<p> <%= event.description %></p>
 <%= current_user.latitude %>
 <%= current_user.longitude %>
+
+<% @locations.each do |location| %>
+	<%= location.name %>
 <% end %>
