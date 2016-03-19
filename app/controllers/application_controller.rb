@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :set_auth
+  before_action :current_user, only: :get_current_user_location
+  before_action :authenticate!
 
   def authenticate!
      redirect_to root_path unless user_signed_in?
@@ -11,9 +13,19 @@ class ApplicationController < ActionController::Base
   def user_signed_in?
      !!session[:user_id]
   end
-  
+
   def current_user
      User.find(session[:user_id])
+  end
+
+  def get_current_user_location
+      location_info = request.location
+      @locations = Event.near([location_info.latitude, location_info.longitude], 20)
+  end
+
+  def update_ip
+    current_user.update(ip_address: request.remote_ip)
+    current_user.save
   end
 
   private

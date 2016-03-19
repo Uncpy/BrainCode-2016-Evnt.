@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	// alert('hello');
 
-	$('.search-tag').bind('click', function() {
+	$('.search-tags').delegate('.search-tag', 'click', function() {
 		$(this).remove();
 	});
 

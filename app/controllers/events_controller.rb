@@ -4,7 +4,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all.order("created_at DESC")
-    @ip = request.remote_ip
+    get_current_user_location
   end
 
   def show
@@ -43,7 +43,7 @@ class EventsController < ApplicationController
   private
 
     def events_params
-      params.require(:event).permit(:name, :description, :address, :max, :date)
+      params.require(:event).permit(:name, :description, :address, :max, :date, :latitude, :longitude)
     end
 
     def find_events
