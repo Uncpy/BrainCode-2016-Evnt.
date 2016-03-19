@@ -199,3 +199,34 @@ textarea:focus, input:focus{
 	position: relative;
 		top: -50px;
 }
+
+/* my-event-list */
+
+.my-evnts {
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 25px;
+	padding: 5%;
+
+	ul {
+		list-style-type: none;
+	}
+
+	a {
+		font-weight: bold;
+	}
+
+	h3 {
+		/*margin-top: 0;*/
+	}
+
+	p {
+		margin: 5% 0%;
+	}
+
+	.sexy_line {
+	  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 300, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
+		width: 100%;
+		margin-bottom: 2%;
+	}
+
+}

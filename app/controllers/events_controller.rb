@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   def index
     @events = Event.all.order("date DESC")
     get_current_user_location
+
     @tagit = ""
   end
 
@@ -42,8 +43,6 @@ class EventsController < ApplicationController
     @event.destroy
     redirect_to root_path
   end
-
-
 
   private
 

@@ -39,6 +39,15 @@ main {
 	margin: 0% 15%;
 }
 
+main a {
+	color: rgba(154, 28, 66, 1);
+
+	&:hover {
+		color: rgba(191, 64, 103, 1);
+		text-decoration: none;
+	}
+}
+
 .pull-left {
 	float: left;
 }
