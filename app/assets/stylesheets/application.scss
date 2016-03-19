@@ -85,7 +85,7 @@ header ul {
 header li:hover {
 	/*color: rgba(255, 255, 255, 0.8);*/
 	cursor: pointer;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 header li {
@@ -99,10 +99,10 @@ header li {
 header a {
 	color: inherit;
 	display: block;
-	text-decoration: none;
 }
 
 header a:hover {
+	/*text-decoration: none;*/
 	color: inherit;
 }
 
@@ -115,6 +115,10 @@ header #evnt-logo {
 	font-weight: bold;
 	position: relative;
 		left: +40%;
+
+	a:hover {
+		text-decoration: none;
+	}	
 }
 
 header .img-circle {
@@ -181,7 +185,8 @@ header .facebook {
 }
 
 .evnt-nav ul li:hover {
-	background: rgba(186, 44, 138, 1);
+	background: rgba(154, 28, 66, 0.7);
+	text-decoration: none;
 }
 
 .evnt-nav ul li a {
@@ -203,7 +208,11 @@ footer {
 	/*border-top: 1px solid rgba(255, 255, 255, 0.5);*/
 	color: white;
 	margin: 5% 10%;
-	padding-top: 0.5%;
+	padding-top: 0;
+}
+
+footer .sexy_line {
+	margin-bottom: 1%;
 }
 
 footer div {

@@ -1,23 +1,88 @@
-<h2><%= @event.name %></h2>
-<p><%= @event.description %></p>
-<p><%= @event.address %></p>
-<p><%= @event.date %></p>
-<p>Event owner <%= @event.user.name %></p>
+<div class="row">
+  <div class="col-lg-12 title">
+    <h1><%= @event.name %></h1>
+  </div>
+  <div class="col-lg-offset-3 col-lg-6 hashtags">
+    <span class="hashtag">#tag</span>
+    <span class="hashtag">#tag</span>
+    <span class="hashtag">#tag</span>
+  </div>
+</div>
 
-<% if user_signed_in? %>
-  <% if current_user.id == @event.user_id %>
-    <%= link_to "Edit", edit_event_path(@event) %>
-    <%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"} %>
-  <% else %>
-  	<% if @event.attendees.include?(current_user) %>
-      <%= simple_form_for(current_user.invites.find_by(attended_event_id: @event.id), :html => { :method => :delete }) do |f| %>
-        <%= f.submit "Odejdź" %>
-      <% end %>
-    <% else %>
-      <%= simple_form_for(current_user.invites.build(attended_event_id: @event.id)) do |f| %>
-        <%= f.hidden_field :attended_event_id, :value => @event.id %>
-          <%= f.submit "Dołącz" %>
-      <% end %>
-    <% end %>
-  <% end %>
-<% end %>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="row evnt-info">
+      <h3>Opis</h3>
+      <p class="evnt-descr"><%= @event.description %></p>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-lg-5  evnt-info">
+        <h3>Adres</h3>
+        <p><%= @event.address %></p>
+      </div>
+      <div class="col-lg-offset-2 col-lg-5  evnt-info">
+        <h3>Data i godzina</h3>
+        <p><%= @event.date %></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-3">
+    <div class="row">
+      <div class="col-lg-offset-1 col-lg-10 evnt-info">
+        <h3>Lista uczestników</h3>
+        <ul class="pull-left evnt-usr-list">
+          <li>Uczestnik 001</li>
+          <li>Uczestnik 002</li>
+          <li>Uczestnik 003</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3">
+    <div class="row evnt-info">
+      <div class="col-lg-12">
+        <h3>Organizator</h3>
+        <p class="pull-left"><%= @event.user.name %></p>
+      </div>
+    </div>
+    
+    <div class="row evnt-info" style="margin-top: 5%">
+      <ul class="evnt-controlls">
+        <% if user_signed_in? %>
+          <% if current_user.id == @event.user_id %>
+            <li>
+              <i class='fa fa-pencil'></i>
+              <%= link_to "Edit", edit_event_path(@event) %>
+            </li>
+            <li>
+              <i class="fa fa-trash"></i>
+              <%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?"} %>
+            </li>
+          <% else %>
+          	<% if @event.attendees.include?(current_user) %>
+              <li>
+                <i class="fa fa-minus"></i>
+                <%= simple_form_for(current_user.invites.find_by(attended_event_id: @event.id), :html => { :method => :delete }) do |f| %>
+                  <%= f.submit "Odejdź" %>
+                <% end %>
+              </li>
+            <% else %>
+              <li>
+                <i class="fa fa-plus"></i>
+                <%= simple_form_for(current_user.invites.build(attended_event_id: @event.id)) do |f| %>
+                  <%= f.hidden_field :attended_event_id, :value => @event.id %>
+                    <%= f.submit "Dołącz" %>
+                <% end %>
+              </li>
+            <% end %>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
