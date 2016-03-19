@@ -1,9 +1,27 @@
-<%= simple_form_for @event do |f| %>
-  <%= f.input :name, label: 'Event name', error: 'Name is mandatory' %>
-  <%= f.input :description, label: 'Description', error: 'Please write description' %>
-  <%= f.input :address, label: 'Address', error: "Please give us some address info" %>
-  <%= f.input :max, label: 'Max people', error: "We need to know how many ppl" %>
-  <%= f.datetime_select :date, labe: 'Date' %>
-  <br>
-  <%= f.button :submit %>
-<% end %>
+<div class="row">
+	<%= simple_form_for @event do |f| %>
+
+	  <%= f.input :name, placeholder: 'Nazwa...', error: 'Brak nazwy wydarzenia', label: false,
+	  	input_html: { class: 'col-lg-offset-3 col-lg-6'}, wrapper: false %>
+
+	  <%= f.input :description, placeholder: 'Treściwy opis wydarzenia...', error: 'Brak opisu wydarzenia.', 
+	  	label: false, as: :text, wrapper: false,
+	  	input_html: { class: 'col-lg-offset-1 col-lg-6', :rows => 5, :cols => 10}  %>
+
+	  <%= f.input :address, placeholder: 'Lokalizacja (np. ul. Umultowska 87 Poznań)...', label: false, 
+	  	error: 'Brak informacji o lokalizacji wydarzenia.', wrapper: false, 
+	  	input_html: { class: 'col-lg-offset-1 col-lg-4'} %>
+
+	  <%= f.input :max, label: 'Maksymalna liczba uczestników:', error: 'Brak informacji o maksymalnej liczbie uczestników.', wrapper: false,
+	  	input_html: { class: 'col-lg-1'},
+	  	label_html: { class: 'col-lg-offset-1 col-lg-3' } %>
+
+	  <%= f.datetime_local_field :date, label: 'Data wydarzenia:', error: 'Brak informacji o dacie wydarzenia.',
+	  	input_html: { class: 'col-lg-1'}, wrapper: true,
+	  	label_html: { class: 'col-lg-offset-1 col-lg-3' } %>
+
+	  <br>
+	  <%= f.submit "Utwórz wydarzenie", :class => "submit-btn col-lg-offset-5 col-lg-2" %>
+
+	<% end %>
+</div>
