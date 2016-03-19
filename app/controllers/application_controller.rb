@@ -17,8 +17,8 @@ class ApplicationController < ActionController::Base
   end
 
   def get_current_user_location
-      location_info = request.location
-      @locations = Event.near([location_info.latitude, location_info.longitude], 20)
+      @location_info = request.location
+      @locations = Event.near([@location_info.latitude, @location_info.longitude], 20)
   end
 
   def update_ip
