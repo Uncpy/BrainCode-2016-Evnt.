@@ -5,11 +5,15 @@
 
 	<nav class="evnt-nav">
 		<ul>
-			<li><a href="#">Zaloguj się (poprzez facebook'a)</a></li>
-			<li><a href="#">Wyloguj się</a></li>
+			<% if current_user %>
+				<li><a href="#">Wyloguj się</a></li>
+				<li><a href="#">Moje wydarzenia</a></li>
+				<li><a href="#">Dodaj wydarzenie</a></li>
+			<% else %>
+				<li><a href="#">Zaloguj się (poprzez facebook'a)</a></li>
+			<% end %>
+
 			<li><%= link_to "Wydarzenia", events_path %></li>
-			<li><a href="#">Moje wydarzenia</a></li>
-			<li><a href="#">Dodaj wydarzenie</a></li>
 		</ul>
 	</nav>
 </div>

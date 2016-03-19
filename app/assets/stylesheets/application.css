@@ -105,6 +105,7 @@ header {
 }
 
 header nav {
+	align-items: center;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 	display: flex;
 	flex-wrap: nowrap;
@@ -117,21 +118,31 @@ header ul {
 	width: 100%;
 }
 
+header #evnt-logo {
+	font-size: 2em;
+	font-weight: bold;
+}
+
 header li {
-	display: inline-block;
+	border: 1px solid blue;
+	display: inline-flex;
+	height: 100%;
+	line-height: 2em;
 	list-style-type: none;
-	padding: 2% 1% 0.5% 1%;
+	padding: 0% 1% 0.5% 1%;
 }
 
 header a {
 	color: inherit;
+	display: block;
 	text-decoration: none;
 }
 
-#evnt-logo {
+/*#evnt-logo {
 	background: url('logo/evnt_logo100x100.png');
-	background-size: cover;
-}
+	background-size: contain;
+	background-repeat: no-repeat;
+}*/
 
 /* footer */
 
