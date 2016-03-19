@@ -16,6 +16,17 @@ class ApplicationController < ActionController::Base
      User.find(session[:user_id])
   end
 
+  def get_current_user_location
+    location_info = request.location
+    current_user.update(ip_address: location_info.latitude)
+    current_user.save
+  end
+
+  def update_ip
+    current_user.update(ip_address: request.remote_ip)
+    current_user.save
+  end
+
   private
     def current_user
       @current_user ||= User.find(session[:user_id]) if session[:user_id]
