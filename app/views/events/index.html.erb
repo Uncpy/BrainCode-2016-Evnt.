@@ -3,4 +3,5 @@
 <% @events.each do |event| %>
 	<h2><%=  link_to event.name, event %></h2>
 	<p> <%= event.description %></p>
+<%= @ip %>
 <% end %>
