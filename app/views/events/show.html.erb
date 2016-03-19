@@ -35,9 +35,9 @@
       <div class="col-lg-offset-1 col-lg-10 evnt-info">
         <h3>Lista uczestników</h3>
         <ul class="pull-left evnt-usr-list">
-          <li>Uczestnik 001</li>
-          <li>Uczestnik 002</li>
-          <li>Uczestnik 003</li>
+          <% @attendees.each do |attendee| %>
+            <li><%= attendee.name %></li>
+          <% end %>
         </ul>
       </div>
     </div>
