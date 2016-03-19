@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	// alert('hello');
 
 	$('.search-tags').delegate('.search-tag', 'click', function() {
 		$(this).remove();

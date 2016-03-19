@@ -6,9 +6,11 @@
 	<nav class="evnt-nav">
 		<ul>
 			<% if user_signed_in? %>
-				<li><%= link_to "Wyloguj się", 'sign_out', method: :delete %></li>
-				<li><a href="#">Moje wydarzenia</a></li>
-				<li><%= link_to "Dodaj wydarzenie", new_event_path %></li>
+				<span class="user-part">
+					<li><%= link_to "Wyloguj się", 'sign_out', method: :delete %></li>
+					<li><a href="#">Moje wydarzenia</a></li>
+					<li><%= link_to "Dodaj wydarzenie", new_event_path %></li>
+				</span>
 			<% else %>
 				<li><%= link_to "Zaloguj się (poprzez facebook'a)", "auth/facebook" %></li>
 			<% end %>
