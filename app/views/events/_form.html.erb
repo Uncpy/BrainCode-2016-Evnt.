@@ -12,6 +12,9 @@
 	  	error: 'Brak informacji o lokalizacji wydarzenia.', wrapper: false, 
 	  	input_html: { class: 'col-lg-offset-1 col-lg-4'} %>
 
+	  <%= f.input :tag_list, placeholder: 'Tagi (separowane przecinkami)', label: false,
+	  	error: 'Proszę podać minimum 1 tag', wrapper: false %>
+
 		<!-- <%= f.input :max, label: 'Maksymalna liczba uczestników:', error: 'Brak informacji o maksymalnej liczbie uczestników.', wrapper: false,
 	  	input_html: { class: 'col-lg-1'},
 	  	label_html: { class: 'col-lg-offset-1 col-lg-3' } %> -->

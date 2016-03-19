@@ -3,8 +3,9 @@ class EventsController < ApplicationController
   before_action :authenticate!, except: [:index, :show]
 
   def index
-    @events = Event.all.order("created_at DESC")
+    @events = Event.all.order("date DESC")
     get_current_user_location
+    get_tags_to_show
   end
 
   def show
@@ -42,10 +43,14 @@ class EventsController < ApplicationController
     redirect_to root_path
   end
 
+  def get_tags_to_show
+    @tag_list = Event.tagged_with("%#{params[:query]}%", :any => true)
+  end
+
   private
 
     def events_params
-      params.require(:event).permit(:name, :description, :address, :max, :date, :latitude, :longitude)
+      params.require(:event).permit(:name, :description, :address, :max, :date, :latitude, :longitude, :tag_list)
     end
 
     def find_events
